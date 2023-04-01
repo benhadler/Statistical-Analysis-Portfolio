@@ -1,0 +1,6 @@
+Anxiety<- c(1,5,9,6,8,5,2,10,2,7)
+Alcohol_Consumption <- c(0,1,3,3,10,0,0,5,2,3)
+reg <- lm(Alcohol_Consumption ~ Anxiety)
+summary(reg)
+plot(Anxiety,Alcohol_Consumption,ylim=c(0,10), main='Scatter Plot of Alcohol by Anxiety',ylab = 'Alcohol')
+abline(reg,col='blue')

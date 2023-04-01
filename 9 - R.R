@@ -1,0 +1,16 @@
+library(multcomp)
+wk0 <- c(3,3,2,3)
+wk2 <- c(1,2,2,2)
+wk4 <- c(0,0,1,0)
+id= c(rep(1:4,3))
+time=c(rep('wk0',4))
+time=c(time, rep('wk2',4))
+time=c(time, rep('wk4',4))
+time
+psychosis <- c(wk0,wk2,wk4)
+data = data.frame(id,time,psychosis)
+data
+aov <- aov(psychosis ~ time, data)
+summary(aov)
+post_test <- glht(aov)
+summary(post_test)

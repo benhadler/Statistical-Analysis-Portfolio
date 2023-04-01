@@ -1,0 +1,7 @@
+library(stats)
+Inescapable = c(8,22)
+Escapable = c(19,11)
+chisq.test(Inescapable,Escapable)
+df = data.frame(Inescapable,Escapable)
+chisq.test(df,correct =FALSE)
+chisq.test(df)

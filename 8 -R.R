@@ -1,0 +1,16 @@
+library(packages)
+install.packages('effectsize')
+library(multcomp)
+library(effectsize)
+Vehicle <- c(rep('Truck',9),rep('Car',9))
+Skill <- c(rep('Low',3),rep('Medium',3),rep('High',3),rep('Low',3),rep('Medium',3),rep('High',3))
+Accidents <- c(2,2,2,3,4,5,1,1,1,2,2,2,1,2,3,1,2,3)
+data = data.frame(Vehicle,Skill,Accidents)
+data
+aov <-aov(Accidents ~ Vehicle * Skill, data=data)
+summary(aov)
+lsd <- LSD.test(aov,'Accidents')
+lsd
+post_test <- glht(aov)
+summary(post_test)
+eta_squared(aov)

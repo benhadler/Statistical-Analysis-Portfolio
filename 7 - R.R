@@ -1,0 +1,15 @@
+# used t
+library(pacman)
+pacman::p_load(pacman, agricolae)
+library(agricolae)
+install.packages('agricolae')
+Neurotic <- c(3,6,5,5,6)
+Extraverted <- c(1,2,5,1,1)
+Personality <- c(rep('Neurotic',5),rep('Extraverted',5),rep('Open',5))
+exFreq <- c(Neurotic,Extraverted,Open)
+data <- data.frame(Personality,exFreq)
+aov <- aov(exFreq ~ Personality, data=data)
+summary(aov)
+out <- LSD.test(aov,"Personality")
+out
+TukeyHSD(aov, conf.level=.95) 
