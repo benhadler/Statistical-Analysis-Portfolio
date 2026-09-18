@@ -21,6 +21,6 @@ PDF files contain SPSS analyses and hand calculations. The corresponding R scrip
 
 **8-Two-Way Anova.pdf and 8 -R.R:** I explored how vehicle type and skill level related to accident counts using two-way ANOVA. I included their interaction in the model and used effectsize to calculate eta-squared effect sizes.
 
-**9-Repeated Measures ANOVA.pdf and 9 - R.R:** I explored psychosis scores measured at baseline, two weeks and four weeks. I organized the repeated observations by participant and time in R; the current script compares time points using aov without modeling the within-participant structure.
+**9-Repeated Measures ANOVA.pdf and 9 - R.R:** I explored changes in psychosis scores across three time points using a one-way repeated measures ANOVA using uncorrected and sphericity-corerected models. I also performed Bonferroni-adjusted post hoc tests.
 
 **10-Chi Squared.pdf and 10 -R.R:** I explored categorical counts for escapable and inescapable conditions using a chi-squared test. I organized the counts into a table and compared tests with and without the continuity correction.
